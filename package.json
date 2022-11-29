@@ -26,16 +26,16 @@
         "get_image_sizes_precommit": "node ./scripts/get_image_sizes --throw-on-diff"
     },
     "dependencies": {
-        "@11ty/eleventy": "^1.0.1",
-        "@fortawesome/fontawesome-free": "^6.1.2",
+        "@11ty/eleventy": "^1.0.2",
+        "@fortawesome/fontawesome-free": "^6.2.1",
         "@midzer/tobii": "^2.4.0",
         "hamburgers": "^1.2.1",
-        "jsdom": "^20.0.0",
+        "jsdom": "^20.0.3",
         "markdown-it": "^13.0.1",
         "parcel-bundler": "^1.12.4",
         "prism-themes": "^1.9.0",
         "rfs": "^9.0.6",
-        "sass": "^1.54.0",
+        "sass": "^1.56.1",
         "tobii": "^2.0.0-alpha"
     },
     "devDependencies": {
@@ -45,7 +45,7 @@
     },
     "engines": {
         "node": "^16.14.2",
-        "npm": "^8.5.5"
+        "npm": "^9.1.2"
     },
     "precommit": "get_image_sizes_precommit"
 }
