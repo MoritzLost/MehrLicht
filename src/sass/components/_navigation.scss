@@ -25,17 +25,6 @@
         padding: 2rem;
     }
 
-    &__logo {
-        width: 80%;
-        max-width: 15rem;
-        height: auto;
-        margin-bottom: 2rem;
-        @include breakpoint-up (md) {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
     &__section {
         margin-bottom: 2rem;
         @include stack(.75rem);
