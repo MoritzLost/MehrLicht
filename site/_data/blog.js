@@ -67,13 +67,6 @@ module.exports = [
         }
     },
     {
-        date: '2022-06-14Z',
-        image: {
-            name: 'subjects/20220611.jpg',
-            alt: 'The nelson column as a dark outline against a blue sky with an airplan and its vapor trail.',
-        },
-    },
-    {
         date: '2022-06-12Z',
         image: {
             name: 'subjects/20220612-2.jpg',
