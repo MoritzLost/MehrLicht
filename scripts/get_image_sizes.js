@@ -9,6 +9,7 @@ const image_size = require('image-size');
  * @param string basePath   The base directory, resulting filenames will be relative to that directory.
  */
 const listFilesInDirectory = (dir, basePath) => fs.readdirSync(dir, { withFileTypes: true })
+    .filter(dirent => !/^\./.test(dirent.name))
     .map(dirent => dirent.isDirectory()
             ? listFilesInDirectory(path.join(dir, dirent.name), basePath)
             : path.relative(basePath, path.join(dir, dirent.name))
