@@ -15,6 +15,19 @@ module.exports = [
     //     }
     // },
     {
+        date: '2023-12-31Z',
+        image: {
+            name: '2023-12-31-new-years-fireworks/new_years_fireworks_03.jpg',
+            alt: 'A blue firework exploding against the outline of a tree, trailing blue smoke.',
+        },
+        caption: "New year's eve in Cologne.",
+        link: {
+            text: 'See more fireworks',
+            url: '/new-years-fireworks/',
+            icon: 'solid/arrow-right',
+        }
+    },
+    {
         date: '2022-09-24Z',
         image: {
             name: '2022-09-24-isle-of-arran/isle_of_arran_17.jpg',
