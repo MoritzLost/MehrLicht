@@ -21,7 +21,7 @@ description: Photography by Moritz L'Hoest. Hobby photographer from Cologne, Ger
 <section class="homepage-content__section">
     <h2 id="latest-photos">Latest photos</h2>
     <div class="three-columns">
-        {% for entry in blog | firstNItems(6) %}
+        {% for entry in blog | firstNItems(8) %}
             {% set link = {
                 url: entry.link.url,
                 text: entry.link.text,

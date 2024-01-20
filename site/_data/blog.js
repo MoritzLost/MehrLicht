@@ -15,6 +15,19 @@ module.exports = [
     //     }
     // },
     {
+        date: '2024-01-20Z',
+        image: {
+            name: '2024-01-20-cologne-under-snow/cologne_under_snow_003.jpg',
+            alt: 'A statue of a women, partially covered in snow, lit from behind by a street lantern under heavy snowfall.',
+        },
+        caption: 'Cologne under snow.',
+        link: {
+            text: 'More snowy pictures',
+            url: '/cologne-under-snow/',
+            icon: 'solid/snowflake',
+        }
+    },
+    {
         date: '2023-12-31Z',
         image: {
             name: '2023-12-31-new-years-fireworks/new_years_fireworks_03.jpg',
