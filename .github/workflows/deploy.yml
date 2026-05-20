@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Restore Astro image cache
-        uses: actions/cache@v5
+        uses: actions/cache/restore@v5
         with:
           path: .astro/
           key: astro-${{ hashFiles('src/content/**/*.{jpg,jpeg,png,webp,avif,gif,tiff}', 'src/utils/responsive-images.ts') }}
@@ -33,6 +33,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Save Astro image cache
+        uses: actions/cache/save@v5
+        with:
+          path: .astro/
+          key: astro-${{ hashFiles('src/content/**/*.{jpg,jpeg,png,webp,avif,gif,tiff}', 'src/utils/responsive-images.ts') }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy dist/ --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }}
