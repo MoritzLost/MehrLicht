@@ -39,10 +39,14 @@ const projects = await getProjectsCollectionInOrder();
             <div class="three-columns">
                 {blog.slice(0, 8).map(async entry => <Teaser image={entry.data.image.file} alt={entry.data.image.alt} date={entry.data.date} link={entry.data.link} pageLayout="three_columns" pageWidth="full" />)}
             </div>
-            <a href="/blog/" class="icon-link">
-                <Icon icon="arrow-right" class="icon-link__icon" />
-                View older photos in the photo blog
-            </a>
+            <p class="stack" style="--stack-gap: 1rem;">
+                <a href="/blog/" class="icon-link">
+                    <Icon icon="arrow-right" class="icon-link__icon" />View older photos in the photo blog
+                </a>
+                <a href="/rss.xml" class="icon-link">
+                    <Icon icon="rss" style="solid" class="icon-link__icon" />RSS Feed – Subscribe to new photos
+                </a>
+            </p>
         </section>
 
         <section class="homepage-content__section">

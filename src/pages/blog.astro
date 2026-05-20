@@ -21,6 +21,10 @@ const width = 'base';
 >
     <PageHeading heading="Photo blog" />
 
+    <p><a href="/rss.xml" class="icon-link">
+        <Icon icon="rss" style="solid" class="icon-link__icon" />RSS Feed – Subscribe to new photos
+    </a></p>
+
     <div class="blog">
         {blog.map(async entry => {
             const lightbox = await getLightboxImage(entry.data.image.file);

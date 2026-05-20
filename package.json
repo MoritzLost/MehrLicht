@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "@astrojs/check": "^0.9.9",
+        "@astrojs/rss": "^4.0.18",
         "@astrojs/sitemap": "^3.7.2",
         "@fortawesome/fontawesome-free": "^7.2.0",
         "@midzer/tobii": "^3.2.0",
