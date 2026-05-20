@@ -3,7 +3,7 @@ import Html from '@layouts/Html.astro';
 import BackToTop from '@components/BackToTop.astro';
 import Icon from '@components/Icon.astro';
 import Picture from '@components/Picture.astro';
-import portrait from '../content/photos/home/2020_moritz_lost_compressed.jpg';
+import portrait from '../content/photos/2024/DSCF4088_optimized.jpg';
 import Teaser from '@components/Teaser.astro';
 import { getBlogCollectionInOrder, getSubjectsCollectionInOrder, getProjectsCollectionInOrder } from '@utils/collections';
 import { preview as favouritesPreview } from './favourites.astro';
@@ -55,28 +55,29 @@ const projects = await getProjectsCollectionInOrder();
                 <figure class="intro-box__figure">
                     <Picture
                         src={portrait}
-                        alt="A portrait of me, Moritz L’Hoest, wearing my glasses and smiling slightly."
+                        alt="I’m smiling into the camera."
                         sizes="min(20rem, 100vw - 2rem)"
                         widths={[240, 360, 480, 640, 960]}
                         class="intro-box__image"
                     />
                     <figcaption class="intro-box__caption">
-                        15 September 2020
+                        15 June 2024
                     </figcaption>
                 </figure>
                 <div class="intro-box__content content">
                     <p>
-                        Hi there! I’m Moritz L’Hoest, web developer by trade and photography enthusiast since 2015. I live in Cologne, Germany and shoot a variety of subjects. My main subjects are <a href="/people/">people</a> as well as <a href="/nature/">wildlife and nature photography</a>. I also take a lot of <a href="/travel/">travel and city photography</a>. Finally, there's also some <a href="/weddings/">weddings</a> in there.
-                    </p>
-                    <p>
-                        You can browse my photos by subject or by project. The subject pages include what I consider my best photos in the respective categories. The project pages are based on specific occasions, places or shoots and are presented in chronological order, starting with the most recent.
+                        Hi there! I’m Moritz L’Hoest, web developer by trade and photography enthusiast since 2015. I live in Cologne, Germany and shoot a variety of subjects, like <a href="/nature/">wildlife</a> and some <a href="/travel/">travel and city</a> photography. It’s been a while since I did <a href="/people/">portrait sessions</a> and shot some <a href="/weddings/">weddings</a>.
                     </p>
                     <p>
                         Also, check out my <a href="/blog/">photo blog</a> or go straight to <a href="/favourites/">my favourite photos</a>!
                     </p>
                     <p>
+                        More about my web development work and open source projects:<br>
+                        <a class="intro-box__link icon-link" href="https://moritzlost.dev"><Icon icon="arrow-right" class="icon-link__icon" />moritzlost.dev</a>
+                    </p>
+                    <p>
                         Get in touch:<br>
-                        <a href="mailto:m@mehrlicht.photos" class="intro-box__link icon-link"><Icon icon="envelope" class="icon-link__icon" />m@mehrlicht.photos</a><br>
+                        <a href="mailto:m@mehrlicht.photos" class="intro-box__link icon-link"><Icon icon="envelope" class="icon-link__icon" />m@mehrlicht.photos</a>
                     </p>
                 </div>
             </div>
