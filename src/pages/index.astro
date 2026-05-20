@@ -86,8 +86,8 @@ const projects = await getProjectsCollectionInOrder();
         <section class="homepage-content__section">
             <h2 id="photos-by-subject">Photos by subject</h2>
             <div class="teaser-grid">
-                {subjects.map(subject => <Teaser image={subject.data.image} link={{ url: `/${subject.id}/`, text: subject.data.title, icon: 'arrow-right' }} pageLayout="three_columns" pageWidth="full" />)}
                 <Teaser image={favouritesPreview} link={{ url: '/favourites/', text: 'My favourite photos' }} pageLayout="three_columns" pageWidth="full" />
+                {subjects.map(subject => <Teaser image={subject.data.image} link={{ url: `/${subject.id}/`, text: subject.data.title, icon: 'arrow-right' }} pageLayout="three_columns" pageWidth="full" />)}
             </div>
         </section>
 

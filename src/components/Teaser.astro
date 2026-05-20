@@ -47,7 +47,6 @@ const lightboxImage = lightbox ? await getLightboxImage(image) : null;
         <Time date={date} class="teaser__date" />
     </footer>}
     {link && <a href={link.url} class="teaser__link stretched-link icon-link">
-        <Icon icon={link.icon || 'arrow-right'} style={link.iconStyle || 'solid'} class="icon-link__icon" />
-        {link.text}
+        <Icon icon={link.icon || 'arrow-right'} style={link.iconStyle || 'solid'} class="icon-link__icon" />{link.text}
     </a>}
 </figure>
