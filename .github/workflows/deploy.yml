@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: package.json
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Restore Astro image cache
+        uses: actions/cache@v5
+        with:
+          path: .astro/
+          key: astro-${{ hashFiles('src/content/**/*.{jpg,jpeg,png,webp,avif,gif,tiff}', 'src/utils/responsive-images.ts') }}
+          restore-keys: astro-
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy dist/ --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

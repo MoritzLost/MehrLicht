@@ -1,0 +1,40 @@
+---
+import { getProjectsCollectionInOrder, getSubjectsCollectionInOrder } from "@utils/collections"
+
+const navSections = [
+    {
+        heading: 'General',
+        items: [
+            { label: 'Home', url: '/' },
+            { label: 'Photo blog', url: '/blog/' },
+            { label: 'My favourites', url: '/favourites/' },
+        ],
+    },
+    {
+        heading: 'Subjects',
+        items: await getSubjectsCollectionInOrder()
+            .then(subjects => subjects.map(subject => ({ label: subject.data.title, url: `/${subject.id}/` }))),
+    },
+    {
+        heading: 'Projects',
+        items: await getProjectsCollectionInOrder()
+            .then(projects => projects.map(project => ({ label: project.data.title, url: `/${project.id}/` }))),
+    }
+]
+---
+
+<h2 class="visually-hidden">Site menu</h2>
+
+{navSections.map(section => <section class="navigation__section">
+    {section.heading && <h3 class="navigation__headline">
+        {section.heading}
+    </h3>}
+
+    <ul class="navigation__list">
+        {section.items.map(item => <li class="navigation__item">
+            <a href={item.url} class="navigation__link" aria-current={item.url === Astro.url.pathname ? 'page' : undefined}>
+                {item.label}
+            </a>
+        </li>)}
+    </ul>
+</section>)}

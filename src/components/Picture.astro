@@ -1,0 +1,41 @@
+---
+import { Picture as AstroPicture } from 'astro:assets';
+import type { ComponentProps } from 'astro/types';
+import { responsiveImages } from '@utils/responsive-images';
+
+export type Layout = 'one_column' | 'two_columns' | 'three_columns';
+export type Width = 'base' | 'wide' | 'full';
+
+const layoutMap: Record<Layout, keyof typeof responsiveImages> = {
+    one_column: 'oneColumn',
+    two_columns: 'twoColumns',
+    three_columns: 'threeColumns',
+};
+
+type Props = Omit<ComponentProps<typeof AstroPicture>, 'formats' | 'quality'> & {
+    pageLayout?: Layout;
+    pageWidth?: Width;
+    formats?: ComponentProps<typeof AstroPicture>['formats'];
+    quality?: ComponentProps<typeof AstroPicture>['quality'];
+};
+
+const {
+    pageLayout = 'one_column',
+    pageWidth = 'base',
+    formats = ['avif', 'webp'],
+    quality = 'high',
+    widths,
+    sizes,
+    ...rest
+} = Astro.props;
+
+const responsiveConfig = responsiveImages[layoutMap[pageLayout]][pageWidth];
+---
+
+<AstroPicture
+    formats={formats}
+    quality={quality}
+    widths={widths ?? responsiveConfig.srcset}
+    sizes={sizes ?? `auto, ${responsiveConfig.sizes}`}
+    {...rest as any}
+/>

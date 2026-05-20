@@ -1,0 +1,12 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    background: var(--button-background);
+    color: var(--button-color);
+    border: 0 none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    padding: 0;
+}

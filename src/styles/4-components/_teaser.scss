@@ -1,0 +1,45 @@
+@use "../2-mixins/breakpoints";
+
+.teaser-grid {
+    --max-columns: 1;
+
+    @include breakpoints.breakpoint-up(sm) {
+        --max-columns: 2;
+    }
+
+    @include breakpoints.breakpoint-up(lg) {
+        --max-columns: 3;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(var(--max-columns, auto-fit), minmax(16rem, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: clamp(1rem, 2.5vw, 3rem) 2rem;
+
+    &__link {
+        margin-top: 2vw !important;
+    }
+}
+
+.teaser {
+    position: relative;
+
+    > * + * {
+        margin-top: .5rem;
+    }
+
+    &__caption {
+        font-size: var(--font-size-1);
+        line-height: var(--line-height-headings);
+        font-weight: var(--font-weight-bold);
+    }
+
+    &__footer {
+        font-size: var(--font-size--1);
+    }
+
+    &__link {
+        font-size: var(--font-size-0);
+        font-weight: var(--font-weight-bold);
+    }
+}

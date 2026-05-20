@@ -1,0 +1,99 @@
+---
+import Html from '@layouts/Html.astro';
+import BackToTop from '@components/BackToTop.astro';
+import Icon from '@components/Icon.astro';
+import Picture from '@components/Picture.astro';
+import portrait from '../content/photos/home/2020_moritz_lost_compressed.jpg';
+import Teaser from '@components/Teaser.astro';
+import { getBlogCollectionInOrder, getSubjectsCollectionInOrder, getProjectsCollectionInOrder } from '@utils/collections';
+import { preview as favouritesPreview } from './favourites.astro';
+
+const blog = await getBlogCollectionInOrder();
+const subjects = await getSubjectsCollectionInOrder();
+const projects = await getProjectsCollectionInOrder();
+---
+
+<Html
+    title="Moritz L’Hoest – mehrlicht.photos"
+    description="Photography by Moritz L’Hoest. Hobby photographer from Cologne, Germany 📸"
+    image={portrait}
+    width="full"
+>
+
+    <div class="homepage-content">
+        <div class="content">
+            <h1>Photography by Moritz L’Hoest</h1>
+
+            <nav aria-label="Homepage sections">
+                <ul class="homepage-sections-nav">
+                    <li><a href="#latest-photos">Latest photos</a></li>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#photos-by-subject">Photos by subject</a></li>
+                    <li><a href="#photos-by-project">Photos by project</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="homepage-content__section">
+            <h2 id="latest-photos">Latest photos</h2>
+            <div class="three-columns">
+                {blog.slice(0, 8).map(async entry => <Teaser image={entry.data.image.file} alt={entry.data.image.alt} date={entry.data.date} link={entry.data.link} pageLayout="three_columns" pageWidth="full" />)}
+            </div>
+            <a href="/blog/" class="icon-link">
+                <Icon icon="arrow-right" class="icon-link__icon" />
+                View older photos in the photo blog
+            </a>
+        </section>
+
+        <section class="homepage-content__section">
+            <h2 id="about-me">About me</h2>
+            <div class="intro-box">
+                <figure class="intro-box__figure">
+                    <Picture
+                        src={portrait}
+                        alt="A portrait of me, Moritz L’Hoest, wearing my glasses and smiling slightly."
+                        sizes="min(20rem, 100vw - 2rem)"
+                        widths={[240, 360, 480, 640, 960]}
+                        class="intro-box__image"
+                    />
+                    <figcaption class="intro-box__caption">
+                        15 September 2020
+                    </figcaption>
+                </figure>
+                <div class="intro-box__content content">
+                    <p>
+                        Hi there! I’m Moritz L’Hoest, web developer by trade and photography enthusiast since 2015. I live in Cologne, Germany and shoot a variety of subjects. My main subjects are <a href="/people/">people</a> as well as <a href="/nature/">wildlife and nature photography</a>. I also take a lot of <a href="/travel/">travel and city photography</a>. Finally, there's also some <a href="/weddings/">weddings</a> in there.
+                    </p>
+                    <p>
+                        You can browse my photos by subject or by project. The subject pages include what I consider my best photos in the respective categories. The project pages are based on specific occasions, places or shoots and are presented in chronological order, starting with the most recent.
+                    </p>
+                    <p>
+                        Also, check out my <a href="/blog/">photo blog</a> or go straight to <a href="/favourites/">my favourite photos</a>!
+                    </p>
+                    <p>
+                        Get in touch:<br>
+                        <a href="mailto:m@mehrlicht.photos" class="intro-box__link icon-link"><Icon icon="envelope" class="icon-link__icon" />m@mehrlicht.photos</a><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="homepage-content__section">
+            <h2 id="photos-by-subject">Photos by subject</h2>
+            <div class="teaser-grid">
+                {subjects.map(subject => <Teaser image={subject.data.image} link={{ url: `/${subject.id}/`, text: subject.data.title, icon: 'arrow-right' }} pageLayout="three_columns" pageWidth="full" />)}
+                <Teaser image={favouritesPreview} link={{ url: '/favourites/', text: 'My favourite photos' }} pageLayout="three_columns" pageWidth="full" />
+            </div>
+        </section>
+
+        <section class="homepage-content__section">
+            <h2 id="photos-by-project">Photos by project</h2>
+            <div class="teaser-grid">
+                {projects.map(project => <Teaser image={project.data.image} link={{ url: `/${project.id}/`, text: project.data.title, icon: 'arrow-right' }} date={(project.rendered?.metadata?.frontmatter as { date?: Date })?.date} pageLayout="three_columns" pageWidth="full" />)}
+            </div>
+        </section>
+
+        <BackToTop />
+    </div>
+
+</Html>

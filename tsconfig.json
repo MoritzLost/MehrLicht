@@ -1,0 +1,39 @@
+{
+    "extends": "astro/tsconfigs/strict",
+    "include": [
+        ".astro/types.d.ts",
+        "**/*",
+         "../astro.config.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "public"
+    ],
+    "compilerOptions": {
+        "outDir": "dist",
+        "paths": {
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@content/*": [
+                "./src/content/*"
+            ],
+            "@fontawesome/*": [
+                "./node_modules/@fortawesome/fontawesome-free/svgs/*"
+            ],
+            "@layouts/*": [
+                "./src/layouts/*"
+            ],
+            "@scripts/*": [
+                "./src/scripts/*"
+            ],
+            "@styles/*": [
+                "./src/styles/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ],
+        }
+    }
+}

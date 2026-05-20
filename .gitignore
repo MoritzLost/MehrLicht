@@ -1,9 +1,5 @@
-node_modules
 dist/
-
-# ignore the generated .eleventyignore
-.eleventyignore
-
-# Local cache folders folder
-.netlify
-.cache
+node_modules/
+.astro/
+.DS_Store
+.env

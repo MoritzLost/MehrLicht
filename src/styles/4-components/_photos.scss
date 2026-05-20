@@ -1,0 +1,37 @@
+@use "../2-mixins/breakpoints";
+
+.one-column {
+    > * + * {
+        margin-top: 3rem;
+    }
+}
+
+.two-columns {
+    columns: 1;
+    column-gap: 2rem;
+
+    @include breakpoints.breakpoint-up(sm) {
+        columns: 2
+    }
+
+    > * + * {
+        margin-top: 3rem;
+    }
+}
+
+.three-columns {
+    columns: 1;
+    column-gap: 2rem;
+
+    @include breakpoints.breakpoint-up(sm) {
+        columns: 2
+    }
+
+    @include breakpoints.breakpoint-up(lg) {
+        columns: 3;
+    }
+
+    > * + * {
+        margin-top: 3rem;
+    }
+}

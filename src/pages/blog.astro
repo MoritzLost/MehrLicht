@@ -1,0 +1,56 @@
+---
+import Html from "@layouts/Html.astro"
+import BackToTop from "@components/BackToTop.astro";
+import Time from "@components/Time.astro";
+import PageHeading from "@components/PageHeading.astro";
+import Picture from "@components/Picture.astro";
+import { getLightboxImage } from '@utils/lightbox';
+import Icon from "@components/Icon.astro";
+import { getBlogCollectionInOrder } from "@utils/collections";
+
+const blog = await getBlogCollectionInOrder();
+
+const width = 'base';
+---
+
+<Html
+    title="Photo blog"
+    image={blog[0].data.image.file}
+    description="Photo blog by Moritz L’Hoest"
+    width={width}
+>
+    <PageHeading heading="Photo blog" />
+
+    <div class="blog">
+        {blog.map(async entry => {
+            const lightbox = await getLightboxImage(entry.data.image.file);
+
+            return <article class="blog-entry" id={`post-${entry.id}`}>
+                {entry.data.date && <Time date={entry.data.date} class="blog-entry__date" />}
+
+                <figure class="blog-entry__figure">
+                    <a class="lightbox" href={lightbox.src}>
+                        <Picture
+                            src={entry.data.image.file}
+                            alt={entry.data.image.alt}
+                            pageLayout="one_column"
+                            pageWidth={width}
+                            class="blog-entry__image"
+                        />
+                    </a>
+
+                    {entry.data.caption && <figcaption class="blog-entry__caption">
+                        {entry.data.caption}
+                    </figcaption>}
+
+                    {entry.data.link && <a class="blog-entry__link" href={entry.data.link.url}>
+                        <Icon icon={entry.data.link.icon || 'arrow-right'} style={entry.data.link.iconStyle || 'solid'} class="blog-entry__link-icon" />
+                        {entry.data.link.text}
+                    </a>}
+                </figure>
+            </article>
+        })}
+    </div>
+
+    <BackToTop />
+</Html>

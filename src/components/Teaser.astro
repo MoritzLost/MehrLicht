@@ -1,0 +1,53 @@
+---
+import Picture from "./Picture.astro";
+import { getLightboxImage } from '@utils/lightbox';
+import type { Layout, Width } from "./Picture.astro";
+import Icon from "./Icon.astro";
+import Time from "./Time.astro";
+
+interface Props {
+    image: ImageMetadata;
+    alt?: string;
+    date?: Date;
+    link?: {
+        url: string;
+        text: string;
+        icon?: string;
+        iconStyle?: 'solid' | 'regular' | 'brands';
+    };
+    pageLayout?: Layout;
+    pageWidth?: Width;
+    lightbox?: boolean;
+}
+
+const { image, alt = '', date, link, pageLayout, pageWidth, lightbox = true } = Astro.props;
+const lightboxImage = lightbox ? await getLightboxImage(image) : null;
+---
+<figure class="teaser">
+    {lightbox ? (
+        <a href={lightboxImage!.src} class="lightbox">
+            <Picture
+                src={image}
+                alt={alt}
+                pageLayout={pageLayout}
+                pageWidth={pageWidth}
+                class="teaser__image"
+            />
+        </a>
+    ) : (
+        <Picture
+            src={image}
+            alt={alt}
+            pageLayout={pageLayout}
+            pageWidth={pageWidth}
+            class="teaser__image"
+        />
+    )}
+    {date && <footer class="teaser__footer">
+        <Time date={date} class="teaser__date" />
+    </footer>}
+    {link && <a href={link.url} class="teaser__link stretched-link icon-link">
+        <Icon icon={link.icon || 'arrow-right'} style={link.iconStyle || 'solid'} class="icon-link__icon" />
+        {link.text}
+    </a>}
+</figure>

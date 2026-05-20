@@ -1,0 +1,17 @@
+---
+interface Props {
+    heading: string;
+    date?: Date;
+}
+
+const { heading, date } = Astro.props;
+---
+
+<section class="project-header">
+    <h1 class="project-header__headline">{heading}</h1>
+    {date && (
+        <time class="project-header__time" datetime={date.toISOString().slice(0, 10)}>
+            {date.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+    )}
+</section>

@@ -1,0 +1,11 @@
+.icon-link {
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-bold);
+    display: block;
+
+    &__icon {
+        height: 1.25rem;
+        margin-right: .5rem;
+        vertical-align: text-bottom;
+    }
+}

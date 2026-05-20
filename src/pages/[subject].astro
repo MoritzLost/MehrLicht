@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import Html from '@layouts/Html.astro';
+import PageHeading from '@components/PageHeading.astro';
+import BackToTop from '@components/BackToTop.astro';
+import { getLightboxImage } from '@utils/lightbox';
+import Picture from '@components/Picture.astro';
+
+interface Props {
+    subject: CollectionEntry<'subjects'>;
+}
+
+export async function getStaticPaths() {
+    const subjects = await getCollection('subjects');
+    return subjects.map(subject => ({
+        params: { subject: subject.id },
+        props: { subject },
+    }));
+}
+
+const { subject } = Astro.props;
+
+const width = 'full';
+---
+
+<Html
+    title={subject.data.title}
+    description={subject.data.description}
+    image={subject.data.image}
+    width={width}
+>
+    <PageHeading heading={subject.data.title} />
+
+    <div class:list={[{
+        'one-column': subject.data.layout === 'one_column',
+        'two-columns': subject.data.layout === 'two_columns',
+        'three-columns': subject.data.layout === 'three_columns',
+    }]}>
+        {subject.data.photos.map(async photo => {
+            const lightbox = await getLightboxImage(photo);
+            return <figure>
+                <a class="lightbox" href={lightbox.src}>
+                    <Picture
+                        src={photo}
+                        alt=""
+                        pageLayout={subject.data.layout}
+                        pageWidth={width}
+                    />
+                </a>
+            </figure>
+        })}
+    </div>
+
+    <BackToTop />
+</Html>
+

@@ -1,0 +1,44 @@
+---
+import Html from '@layouts/Html.astro';
+import PageHeading from '@components/PageHeading.astro';
+import BackToTop from '@components/BackToTop.astro';
+import Picture from '@components/Picture.astro';
+import { getLightboxImage } from '@utils/lightbox';
+import preview from '../content/photos/2019-10-31-paris/paris_2019_11.jpg';
+import { getFavouritesCollectionInOrder } from '@utils/collections';
+
+export { preview };
+
+const favourites = await getFavouritesCollectionInOrder();
+
+const width = 'wide';
+---
+
+<Html
+    title="My favourite photos"
+    description="Check out my favourite photos 📸 Photography by Moritz L’Hoest."
+    image={preview}
+    width={width}
+>
+    <PageHeading heading="My favourite photos" />
+
+    <div class="one-column">
+        {favourites.map(async entry => {
+            const lightbox = await getLightboxImage(entry.data.image);
+            return <figure class="one-column__figure">
+                <a href={lightbox.src}>
+                    <Picture
+                        src={entry.data.image}
+                        alt=""
+                        pageLayout="one_column"
+                        pageWidth={width}
+                        class="blog-entry__image"
+                    />
+                </a>
+            </figure>
+        })}
+    </div>
+
+    <BackToTop />
+</Html>
+

@@ -1,0 +1,57 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import Html from '@layouts/Html.astro';
+import PageHeading from '@components/PageHeading.astro';
+import BackToTop from '@components/BackToTop.astro';
+import { getLightboxImage } from '@utils/lightbox';
+import Picture from '@components/Picture.astro';
+
+interface Props {
+    project: CollectionEntry<'projects'>;
+}
+
+export async function getStaticPaths() {
+    const projects = await getCollection('projects');
+    return projects.map(project => ({
+        params: { project: project.id },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(project);
+---
+
+<Html
+    title={project.data.title}
+    image={project.data.image}
+    width={project.data.width ?? 'base'}
+    themeColor={project.data.themeColor}
+>
+    <PageHeading heading={project.data.title} date={remarkPluginFrontmatter.date} />
+
+    <Content />
+
+    <div class:list={[{
+        'one-column': project.data.layout === 'one_column',
+        'two-columns': project.data.layout === 'two_columns',
+        'three-columns': project.data.layout === 'three_columns',
+    }]}>
+        {project.data.photos.map (async photo => {
+            const lightbox = await getLightboxImage(photo);
+            return <figure>
+                <a class="lightbox" href={lightbox.src}>
+                    <Picture
+                        src={photo}
+                        alt=""
+                        pageLayout={project.data.layout}
+                        pageWidth={project.data.width}
+                    />
+                </a>
+            </figure>
+        })}
+    </div>
+
+    <BackToTop />
+</Html>

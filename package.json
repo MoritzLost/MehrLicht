@@ -1,10 +1,7 @@
 {
     "name": "mehrlicht-photos",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "description": "Source code for the personal photography website of Moritz L'Hoest.",
-    "keywords": [
-        "eleventy"
-    ],
     "homepage": "https://mehrlicht.photos",
     "bugs": "https://github.com/MoritzLost/MehrLicht/issues",
     "repository": {
@@ -12,40 +9,26 @@
         "url": "https://github.com/MoritzLost/MehrLicht.git"
     },
     "license": "UNLICENSED",
-    "author": "MoritzLost <m@moritzlost.de>",
+    "author": "Moritz L’Hoest <m@moritzlost.dev>",
     "scripts": {
-        "build": "npm run build:eleventy && npm run build:sass && npm run build:parcel",
-        "build:eleventy": "eleventy",
-        "build:sass": "sass --style compressed --no-source-map src/sass/main.scss dist/css/main.css",
-        "build:parcel": "parcel build --out-dir dist/js/ --public-url /js/ src/js/main.js",
-        "start": "npm-run-all build:sass -p watch:*",
-        "watch:eleventy": "eleventy --serve",
-        "watch:sass": "sass --watch --style expanded --embed-source-map src/sass/main.scss dist/css/main.css",
-        "watch:parcel": "parcel watch --out-dir dist/js/ --public-url /js/ src/js/main.js",
-        "get_image_sizes": "node ./scripts/get_image_sizes",
-        "get_image_sizes_precommit": "node ./scripts/get_image_sizes --throw-on-diff"
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro"
     },
     "dependencies": {
-        "@11ty/eleventy": "^1.0.2",
-        "@fortawesome/fontawesome-free": "^6.2.1",
-        "@midzer/tobii": "^2.4.0",
-        "hamburgers": "^1.2.1",
-        "jsdom": "^20.0.3",
-        "markdown-it": "^13.0.1",
-        "parcel-bundler": "^1.12.4",
-        "prism-themes": "^1.9.0",
-        "rfs": "^9.0.6",
-        "sass": "^1.56.1",
-        "tobii": "^2.0.0-alpha"
-    },
-    "devDependencies": {
-        "image-size": "^1.0.2",
-        "npm-run-all": "^4.1.5",
-        "pre-commit": "^1.2.2"
+        "@astrojs/check": "^0.9.9",
+        "@astrojs/sitemap": "^3.7.2",
+        "@fortawesome/fontawesome-free": "^7.2.0",
+        "@midzer/tobii": "^3.2.0",
+        "astro": "^6.3.3",
+        "sass": "^1.99.0"
     },
     "engines": {
-        "node": "^16.14.2",
-        "npm": "^9.1.2"
+        "node": "^24.7.0",
+        "npm": "^11.0.0"
     },
-    "precommit": "get_image_sizes_precommit"
+    "devDependencies": {
+        "wrangler": "^4.92.0"
+    }
 }

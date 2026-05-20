@@ -1,0 +1,32 @@
+---
+interface Props {
+    style?: 'solid' | 'regular' | 'brands';
+    icon: string;
+    size?: number | string;
+    class?: string;
+}
+
+const { style = 'solid', icon, size, class: className } = Astro.props;
+
+const svgs = import.meta.glob<{ default: string }>(
+    '/node_modules/@fortawesome/fontawesome-free/svgs/**/*.svg',
+    { query: '?raw' }
+);
+
+const key = `/node_modules/@fortawesome/fontawesome-free/svgs/${style}/${icon}.svg`;
+let svg = (await svgs[key]?.())?.default;
+
+if (!svg) {
+    throw new Error(`Icon not found: ${style}/${icon}`);
+}
+
+const extraAttrs = [
+    'aria-hidden="true"',
+    size != null ? `width="${size}" height="${size}"` : '',
+    className ? `class="${className}"` : '',
+].filter(Boolean).join(' ');
+
+svg = svg.replace('<svg ', `<svg ${extraAttrs} `);
+---
+
+<Fragment set:html={svg} />

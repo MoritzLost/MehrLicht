@@ -1,0 +1,26 @@
+---
+import Html from '../layouts/Html.astro';
+
+import sheep from '../content/photos/2020-05-20-sheep-2020/sheep_rhine_09.jpg';
+import PageHeading from '@components/PageHeading.astro';
+import { Picture } from 'astro:assets';
+---
+
+<Html
+    title="404 - Page not found"
+    image={sheep}
+>
+    <PageHeading heading="Page not found" />
+
+    <p>Unfortunately, the page you were looking for doesn't exist. It may have been moved or deleted.</p>
+
+    <p>Check out the navigation to find the article you're looking for, or <a href="/">go back to the homepage</a>.</p>
+
+    <Picture
+        src={sheep}
+        alt="A lamb facing away from the camera, running out of the frame"
+        formats={['avif', 'webp']}
+        sizes="auto"
+        widths={[360, 480, 600, 720, 960]}
+    />
+</Html>

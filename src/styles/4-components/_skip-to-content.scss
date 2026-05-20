@@ -1,0 +1,9 @@
+.skip-to-content {
+    color: inherit;
+
+    &:hover, &:focus {
+        color: inherit;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+}

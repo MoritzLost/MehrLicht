@@ -1,0 +1,421 @@
+[
+    {
+        "date": "2024-01-20Z",
+        "image": {
+            "file": "./photos/2024-01-20-cologne-under-snow/cologne_under_snow_003.jpg",
+            "alt": "A statue of a woman, partially covered in snow, lit from behind by a street lantern under heavy snowfall."
+        },
+        "caption": "Cologne under snow.",
+        "link": {
+            "text": "More snowy pictures",
+            "url": "/cologne-under-snow/",
+            "icon": "snowflake"
+        }
+    },
+    {
+        "date": "2023-12-31Z",
+        "image": {
+            "file": "./photos/2023-12-31-new-years-fireworks/new_years_fireworks_03.jpg",
+            "alt": "A blue firework exploding against the outline of a tree, trailing blue smoke."
+        },
+        "caption": "New year's eve in Cologne.",
+        "link": {
+            "text": "See more fireworks",
+            "url": "/new-years-fireworks/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-09-24Z",
+        "image": {
+            "file": "./photos/2022-09-24-isle-of-arran/isle_of_arran_17.jpg",
+            "alt": "A lifeboat with the name Isle of Arran printed on the side."
+        },
+        "caption": "From a trip to the Isle of Arran and Glen Rosa.",
+        "link": {
+            "text": "See more photos from Arran",
+            "url": "/isle-of-arran/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-09-23Z",
+        "image": {
+            "file": "./photos/2022-09-23-loch-lomond/loch_lomond_06.jpg",
+            "alt": "View of Loch Lomond in Scotland with a water bus heading towards a tiny island."
+        },
+        "caption": "We went on a hike from Balloch to Helensburgh.",
+        "link": {
+            "text": "See photos of Loch Lomond",
+            "url": "/loch-lomond/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-09-20Z",
+        "image": {
+            "file": "./photos/2022-09-20-floral-tribute-green-park/floral_tribute_green_park_01.jpg",
+            "alt": "A Paddington bear plush sitting in a sea of flowers, with a tiny Union Jack in its breast pocket."
+        },
+        "caption": "The floral tribute at Green Park.",
+        "link": {
+            "text": "More photos of the floral tribute",
+            "url": "/floral-tribute-green-park/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-09-21Z",
+        "image": {
+            "file": "./photos/2022-09-21-squirrels-of-glasgow/squirrels_glasgow_01.jpg",
+            "alt": "Close-up of a gray squirrel sitting on a dead branch and tilting its head."
+        },
+        "caption": "I found some squirrels in Kelvingrove Park in Glasgow!",
+        "link": {
+            "text": "See Squirrels",
+            "url": "/squirrels-of-glasgow/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-06-12Z",
+        "image": {
+            "file": "./photos/2022/20220612-2.jpg",
+            "alt": "A brown squirrel looking directly at the camera."
+        }
+    },
+    {
+        "date": "2022-03-27Z",
+        "image": {
+            "file": "./photos/2022-03-27-water/water_01.jpg",
+            "alt": "A close-up picture of some froth on a tiny wave in black-and-white."
+        },
+        "link": {
+            "text": "More photos of water",
+            "url": "/water/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2022-03-27Z",
+        "image": {
+            "file": "./photos/2022/20220321.jpg",
+            "alt": "A frog sitting in mud looking directly at the camera."
+        }
+    },
+    {
+        "date": "2022-03-27Z",
+        "image": {
+            "file": "./photos/2022/20220321-2.jpg",
+            "alt": "A red spotted butterfly sitting on a rock."
+        }
+    },
+    {
+        "date": "2022-03-27Z",
+        "image": {
+            "file": "./photos/2020/20200521.jpg",
+            "alt": "Branch of a ginkgo tree with green leaves set against a blue sky."
+        }
+    },
+    {
+        "date": "2022-03-27Z",
+        "image": {
+            "file": "./photos/2017/20171227.jpg",
+            "alt": "A tree standing in a field with radial motion blur around it."
+        }
+    },
+    {
+        "date": "2021-05-30Z",
+        "image": {
+            "file": "./photos/2021-05-30-sheep-2021/sheep_2021_01.jpg",
+            "alt": "A young sheep standing in tall grass, looking attentively at the camera."
+        },
+        "caption": "Sheep again this year!",
+        "link": {
+            "text": "View more sheep from this shoot",
+            "url": "/sheep-2021/"
+        }
+    },
+    {
+        "date": "2021-05-14Z",
+        "image": {
+            "file": "./photos/2021/20210514.jpg",
+            "alt": "A macro shot of a wasp clinging vertically to a board."
+        },
+        "caption": "It took me a while to get close enough to a wasp without it flying away."
+    },
+    {
+        "date": "2021-04-21Z",
+        "image": {
+            "file": "./photos/2021/20210421.jpg",
+            "alt": "A macro shot of a bee."
+        },
+        "caption": "With macro photography, subjects may just come flying in through your kitchen window."
+    },
+    {
+        "date": "2021-04-02Z",
+        "image": {
+            "file": "./photos/2021/20210402.jpg",
+            "alt": "A bumblebee clinging to the underside of some blossoms on a branch."
+        }
+    },
+    {
+        "date": "2021-03-01Z",
+        "image": {
+            "file": "./photos/2021/20210301.jpg",
+            "alt": "A river bank with some black skyscraper silhouettes on the far side set against a sunset."
+        },
+        "caption": "Shot on a Pixel 5"
+    },
+    {
+        "date": "2021-02-20Z",
+        "image": {
+            "file": "./photos/2020/20200126.jpg",
+            "alt": "A shopping cart half submerged in a pond."
+        }
+    },
+    {
+        "date": "2021-01-16Z",
+        "image": {
+            "file": "./photos/2021-01-16-snowy-night-pixel-5/snow_night_pixel_5_04.jpg",
+            "alt": "A black-and-white photo of a cut-down Christmas tree laying on the ground covered in snow."
+        },
+        "link": {
+            "text": "View more photos from this snowy night",
+            "url": "/snowy-night-pixel-5/",
+            "icon": "snowflake"
+        }
+    },
+    {
+        "date": "2020-11-14Z",
+        "image": {
+            "file": "./photos/2020/20201114.jpg",
+            "alt": "Multiple layers of fungi growing on a log."
+        },
+        "caption": "Some interesting fungi growing on a log."
+    },
+    {
+        "date": "2020-09-18Z",
+        "image": {
+            "file": "./photos/2020/20200918.jpg",
+            "alt": "A close-up of a butterfly sitting on a purple flower, showing its orange wings with markings that are reminiscent of a pair of eyes."
+        },
+        "caption": "It's rare for a butterfly to sit still long enough for me to take a close-up."
+    },
+    {
+        "date": "2020-09-15Z",
+        "image": {
+            "file": "./photos/2020/20200915.jpg",
+            "alt": "Silhouette of a woman's head against an orange sunset."
+        }
+    },
+    {
+        "date": "2020-05-20Z",
+        "image": {
+            "file": "./photos/2020-05-20-sheep-2020/sheep_rhine_09.jpg",
+            "alt": "A young sheep on a green field running away from the camera and out of the frame."
+        },
+        "caption": "Young sheep don't want to stand still for you to take their picture!",
+        "link": {
+            "text": "View more sheep",
+            "url": "/sheep-2020/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2020-03-23Z",
+        "image": {
+            "file": "./photos/2020-03-23-ducks-park/ducks_park_05.jpg",
+            "alt": "A duck swimming across a pond, cleanly reflected on the water’s surface"
+        },
+        "caption": "During lockdown you learn to appreciate your immediate environment again. This duck lives in the small park next door.",
+        "link": {
+            "text": "View more ducks",
+            "url": "/ducks-park/"
+        }
+    },
+    {
+        "date": "2019-10-09Z",
+        "image": {
+            "file": "./photos/2019-10-31-paris/paris_2019_11.jpg",
+            "alt": "A wide shot of the Louvre's pyramid entrance, shot from the upper floors so you can see the square surrounding it."
+        },
+        "caption": "I took this from inside the Louvre, looking over the pyramid entrance on a rainy day. The smudges in the lower left are rain drops on the window.",
+        "link": {
+            "text": "View some of my favourite photos",
+            "url": "/favourites/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2019-10-09Z",
+        "image": {
+            "file": "./photos/2019-10-31-paris/paris_2019_09.jpg",
+            "alt": "A black-and-white photo of a marble statue of a woman holding a pigeon"
+        },
+        "caption": "A statue in a little alcove in the Louvre.",
+        "link": {
+            "text": "View all photos from Paris",
+            "url": "/paris/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2019-06-15Z",
+        "image": {
+            "file": "./photos/2019/blue_dragonfly_02.jpg",
+            "alt": "Close-up of a blue damselfly on a green leaf."
+        },
+        "caption": "A blue damselfly that posed for me on my way to a shooting."
+    },
+    {
+        "date": "2019-05-14Z",
+        "image": {
+            "file": "./photos/2019-05-14-black-and-white-sheep/sheep_bw_07.jpg",
+            "alt": "Black-and-white close-up of a sheep's right eye and tagged ear."
+        },
+        "caption": "I went to visit the sheep again!",
+        "link": {
+            "text": "View more black-and-white sheep pictures",
+            "url": "/black-and-white-sheep/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2019-04-23Z",
+        "image": {
+            "file": "./photos/2019-04-23-nutria/nutria_03.jpg",
+            "alt": "A close-up of a young nutria (coypu) with brown fur."
+        },
+        "caption": "We spotted a family of nutria (coypu) by a forest pond.",
+        "link": {
+            "text": "View the entire nutria family",
+            "url": "/nutria/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2019-03-08",
+        "image": {
+            "file": "./photos/2019/den_haag_07.jpg",
+            "alt": "A black-and-white photo of frothy waves approaching the shore, with a lighthouse shining in the background."
+        }
+    },
+    {
+        "date": "2018-12-26Z",
+        "image": {
+            "file": "./photos/2018/20181226.jpg",
+            "alt": "A path next to a dark field leading towards a bright yellow streetlight at dusk."
+        },
+        "caption": "The light at the end of the road."
+    },
+    {
+        "date": "2018-10-10Z",
+        "image": {
+            "file": "./photos/2018/20181010.jpg",
+            "alt": "A sunny path across a hill flanked by power poles."
+        },
+        "caption": "Somewhere in Edinburgh …",
+        "link": {
+            "text": "View all photos I took in Edinburgh",
+            "url": "/edinburgh/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2018-10.08Z",
+        "image": {
+            "file": "./photos/2018-10-31-edinburgh/edinburgh_09.jpg",
+            "alt": "A black-and-white photo of tree tops fading behind mist towards the background."
+        },
+        "caption": "Shot out of a moving train traveling from Edinburgh to Inverness."
+    },
+    {
+        "date": "2018-10-06Z",
+        "image": {
+            "file": "./photos/2018-10-31-edinburgh/edinburgh_06.jpg",
+            "alt": "A black-and-white photo of a raven before a white background looking over its shoulder."
+        },
+        "caption": "We spotted this raven in Edinburgh, and it waited patiently for me to get the best shot I could.",
+        "link": {
+            "text": "View more of my animal photography",
+            "url": "/nature/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2018-07-28Z",
+        "image": {
+            "file": "./photos/2018-07-28-wildlife-park/wildlife_park_002.jpg",
+            "alt": "A deer licking its lips with closed eyes after eating a tasty apple"
+        },
+        "caption": "This deer really enjoyed the apple we gave it!",
+        "link": {
+            "text": "View all photos from the wildlife park",
+            "url": "/wildlife-park/",
+            "icon": "arrow-right"
+        }
+    },
+    {
+        "date": "2018-05-17Z",
+        "image": {
+            "file": "./photos/2018-05-17-sheep-2018/happy_sheep_12.jpg",
+            "alt": "A young sheep looking directly into the camera. It appears to be smiling."
+        },
+        "caption": "The sheep down by the river Rhine are always happy to pose for you!",
+        "link": {
+            "text": "View all sheep pictures I took that day",
+            "url": "/sheep-2018/"
+        }
+    },
+    {
+        "date": "2018-04-26Z",
+        "image": {
+            "file": "./photos/2018-04-26-loxy/loxy_scarf_01.jpg",
+            "alt": "A girl holding a semi-translucent scarf fluttering in the wind, backlit by bright sunlight."
+        },
+        "caption": "Taken during a spontaneous shoot on a sunny day with some scarves."
+    },
+    {
+        "date": "2018-03-28Z",
+        "image": {
+            "file": "./photos/2018-03-31-amsterdam/amsterdam_02.jpg",
+            "alt": "A small boat on a canal in front of some colorful varicoloured house fronts."
+        },
+        "caption": "A canal in Amsterdam.",
+        "link": {
+            "text": "View all photos from Amsterdam",
+            "url": "/amsterdam/"
+        }
+    },
+    {
+        "date": "2017-11-17Z",
+        "image": {
+            "file": "./photos/2018-02-28-christina/christina_deutzer_rheinterrasse_06.jpg",
+            "alt": "Black-and-white close-up of a woman's face looking at a light source. Only the right eye is lit up, the rest fades into the shadows."
+        },
+        "caption": "Taken during a black-and-white portrait session with Christina."
+    },
+    {
+        "date": "2017-10-14Z",
+        "image": {
+            "file": "./photos/2017/yulia_rheinpark_09.jpg",
+            "alt": "A blonde woman standing in front of a tree with yellow leaves in autumn."
+        },
+        "caption": "Autumn colors.",
+        "link": {
+            "text": "Find Yulia on instagram (@julia_with_y)",
+            "url": "https://www.instagram.com/julia_with_y/",
+            "icon": "instagram",
+            "iconStyle": "brands"
+        }
+    },
+    {
+        "date": "2016-07-16Z",
+        "image": {
+            "file": "./photos/2016/20160716.jpg",
+            "alt": "Long exposure of purple fireworks over the Rhine with the Cologne Cathedral."
+        },
+        "caption": "From the yearly fireworks event ‘Kölner Lichter’."
+    }
+]

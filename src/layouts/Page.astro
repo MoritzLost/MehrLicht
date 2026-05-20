@@ -1,0 +1,16 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import Html from './Html.astro';
+import type { Props as LayoutProps } from './Html.astro';
+
+type Props = LayoutProps &
+    MarkdownLayoutProps<{
+        title: string;
+    }>;
+
+const { frontmatter } = Astro.props;
+---
+
+<Html {...frontmatter}>
+    <slot />
+</Html>
