@@ -9,21 +9,25 @@
 .two-columns {
     columns: 1;
     column-gap: 2rem;
-    row-gap: 3rem;
 
     > * + * {
         margin-top: 3rem;
+    }
+
+    @include breakpoints.breakpoint-up(sm) {
+        columns: 2;
     }
 
     @supports (display: grid-lanes) {
         columns: unset;
         display: grid-lanes;
         grid-template-columns: auto;
+        row-gap: 3rem;
 
         @include breakpoints.breakpoint-up(sm) {
             grid-template-columns: repeat(2, 1fr);
 
-            @include breakpoints.breakpoint-up(sm) {
+            & > .span-2, & > .span-3 {
                 grid-column: span 2;
             }
         }
@@ -37,7 +41,10 @@
 .three-columns {
     columns: 1;
     column-gap: 2rem;
-    row-gap: 3rem;
+
+    > * + * {
+        margin-top: 3rem;
+    }
 
     @include breakpoints.breakpoint-up(sm) {
         columns: 2;
@@ -47,14 +54,11 @@
         columns: 3;
     }
 
-    > * + * {
-        margin-top: 3rem;
-    }
-
     @supports (display: grid-lanes) {
         columns: unset;
         display: grid-lanes;
         grid-template-columns: auto;
+        row-gap: 3rem;
 
         @include breakpoints.breakpoint-up(sm) {
             grid-template-columns: repeat(2, 1fr);
