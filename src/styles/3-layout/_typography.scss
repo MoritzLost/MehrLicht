@@ -1,5 +1,5 @@
 body {
-    background: var(--body-background);
+    background: linear-gradient(to bottom, var(--theme-color, var(--primary)) 16rem, #e1e1e1 16rem);
     color: black;
     font-family: var(--font-family-sans-serif);
     font-weight: var(--font-weight-normal);
