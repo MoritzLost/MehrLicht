@@ -38,11 +38,13 @@ const width = 'full';
         'three-columns': subject.data.layout === 'three_columns',
     }]}>
         {subject.data.photos.map(async photo => {
-            const lightbox = await getLightboxImage(photo);
-            return <figure>
+            const lightbox = await getLightboxImage(photo.src);
+            return <figure class:list={[
+                { [`span-${photo.span}`]: photo.span || false }
+            ]}>
                 <a class="lightbox" href={lightbox.src}>
                     <Picture
-                        src={photo}
+                        src={photo.src}
                         alt=""
                         pageLayout={subject.data.layout}
                         pageWidth={width}

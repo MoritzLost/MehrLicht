@@ -5,27 +5,71 @@
     "description": "Travel and city photography by Moritz L'Hoest. Photos from Edinburgh, Paris, Amsterdam and more 🌃",
     "image": "../photos/2018-03-31-amsterdam/amsterdam_02.jpg",
     "photos": [
-        "../photos/2019-10-31-paris/paris_2019_11.jpg",
-        "../photos/2022/20220614-3.jpg",
-        "../photos/2022/20220614-2.jpg",
-        "../photos/2018-03-31-amsterdam/amsterdam_01.jpg",
-        "../photos/2018-10-31-edinburgh/edinburgh_08.jpg",
-        "../photos/2018-10-31-edinburgh/edinburgh_03.jpg",
-        "../photos/2018-03-31-amsterdam/amsterdam_02.jpg",
-        "../photos/2018/20180817.jpg",
-        "../photos/2019-10-31-paris/paris_2019_03.jpg",
-        "../photos/2019/den_haag_06.jpg",
-        "../photos/2018/20181006-2.jpg",
-        "../photos/2016/stuff_from_london_01.jpg",
-        "../photos/2016/stuff_from_london_07.jpg",
-        "../photos/2017/20171217.jpg",
-        "../photos/2018-10-31-edinburgh/edinburgh_15.jpg",
-        "../photos/2018/20181006-3.jpg",
-        "../photos/2016-09-04-rheinkomet/rheinkomet_07.jpg",
-        "../photos/2019/20190816.jpg",
-        "../photos/2016/impressions_of_basel_04.jpg",
-        "../photos/2018-03-31-amsterdam/amsterdam_03.jpg",
-        "../photos/2016/20160529.jpg",
-        "../photos/2016/stuff_from_london_06.jpg"
+        {
+            "src": "../photos/2019-10-31-paris/paris_2019_11.jpg"
+        },
+        {
+            "src": "../photos/2022/20220614-3.jpg"
+        },
+        {
+            "src": "../photos/2022/20220614-2.jpg"
+        },
+        {
+            "src": "../photos/2018-03-31-amsterdam/amsterdam_01.jpg"
+        },
+        {
+            "src": "../photos/2018-10-31-edinburgh/edinburgh_08.jpg"
+        },
+        {
+            "src": "../photos/2018-10-31-edinburgh/edinburgh_03.jpg"
+        },
+        {
+            "src": "../photos/2018-03-31-amsterdam/amsterdam_02.jpg"
+        },
+        {
+            "src": "../photos/2018/20180817.jpg"
+        },
+        {
+            "src": "../photos/2019-10-31-paris/paris_2019_03.jpg"
+        },
+        {
+            "src": "../photos/2019/den_haag_06.jpg"
+        },
+        {
+            "src": "../photos/2018/20181006-2.jpg"
+        },
+        {
+            "src": "../photos/2016/stuff_from_london_01.jpg"
+        },
+        {
+            "src": "../photos/2016/stuff_from_london_07.jpg"
+        },
+        {
+            "src": "../photos/2017/20171217.jpg"
+        },
+        {
+            "src": "../photos/2018-10-31-edinburgh/edinburgh_15.jpg"
+        },
+        {
+            "src": "../photos/2018/20181006-3.jpg"
+        },
+        {
+            "src": "../photos/2016-09-04-rheinkomet/rheinkomet_07.jpg"
+        },
+        {
+            "src": "../photos/2019/20190816.jpg"
+        },
+        {
+            "src": "../photos/2016/impressions_of_basel_04.jpg"
+        },
+        {
+            "src": "../photos/2018-03-31-amsterdam/amsterdam_03.jpg"
+        },
+        {
+            "src": "../photos/2016/20160529.jpg"
+        },
+        {
+            "src": "../photos/2016/stuff_from_london_06.jpg"
+        }
     ]
 }

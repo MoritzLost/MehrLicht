@@ -9,22 +9,38 @@
 .two-columns {
     columns: 1;
     column-gap: 2rem;
-
-    @include breakpoints.breakpoint-up(sm) {
-        columns: 2
-    }
+    row-gap: 3rem;
 
     > * + * {
         margin-top: 3rem;
+    }
+
+    @supports (display: grid-lanes) {
+        columns: unset;
+        display: grid-lanes;
+        grid-template-columns: auto;
+
+        @include breakpoints.breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+
+            @include breakpoints.breakpoint-up(sm) {
+                grid-column: span 2;
+            }
+        }
+
+        > * + * {
+            margin-top: 0;
+        }
     }
 }
 
 .three-columns {
     columns: 1;
     column-gap: 2rem;
+    row-gap: 3rem;
 
     @include breakpoints.breakpoint-up(sm) {
-        columns: 2
+        columns: 2;
     }
 
     @include breakpoints.breakpoint-up(lg) {
@@ -33,5 +49,35 @@
 
     > * + * {
         margin-top: 3rem;
+    }
+
+    @supports (display: grid-lanes) {
+        columns: unset;
+        display: grid-lanes;
+        grid-template-columns: auto;
+
+        @include breakpoints.breakpoint-up(sm) {
+            grid-template-columns: repeat(2, 1fr);
+
+            & > .span-2, & > .span-3 {
+                grid-column: span 2;
+            }
+        }
+
+        @include breakpoints.breakpoint-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+
+            & > .span-2 {
+                grid-column: span 2;
+            }
+
+            & > .span-3 {
+                grid-column: span 3;
+            }
+        }
+
+        > * + * {
+            margin-top: 0;
+        }
     }
 }

@@ -26,7 +26,7 @@ const width = 'wide';
         {favourites.map(async entry => {
             const lightbox = await getLightboxImage(entry.data.image);
             return <figure class="one-column__figure">
-                <a href={lightbox.src}>
+                <a class="lightbox" href={lightbox.src}>
                     <Picture
                         src={entry.data.image}
                         alt=""

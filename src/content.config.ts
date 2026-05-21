@@ -46,7 +46,10 @@ export const collections = {
             title: z.string(),
             description: z.string(),
             image: image(),
-            photos: z.array(image()),
+            photos: z.array(z.object({
+                src: image(),
+                span: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
+            })),
         }),
     }),
     projects: defineCollection({
