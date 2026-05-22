@@ -1,5 +1,53 @@
 [
     {
+        "date": "2026-05-01Z",
+        "image": {
+            "file": "./photos/2026/DSCF6389.JPG",
+            "alt": "A goat with a seeming smile, tilting its head slightly."
+        }
+    },
+    {
+        "date": "2025-08-29Z",
+        "image": {
+            "file": "./photos/2025/DSCF2921.JPG",
+            "alt": "Low waves are lapping towards the shore, a small sailboat is visible on the horizon."
+        },
+        "caption": "Norderney, Germany."
+    },
+    {
+        "date": "2024-08-27Z",
+        "image": {
+            "file": "./photos/2024/DSCF5381.jpg",
+            "alt": "A stag with large antlers."
+        },
+        "caption": "Wildlife park in Dünnwald, Cologne."
+    },
+    {
+        "date": "2024-08-12Z",
+        "image": {
+            "file": "./photos/2024-08-12-bruges-triennial/bruges_triennial_09.jpg",
+            "alt": "A statue in a small lake in a park during summertime."
+        },
+        "caption": "The Königin Astridpark in Bruges, Belgium.",
+        "link": {
+            "text": "More from Bruges Triennial 2024",
+            "url": "/bruges-triennial/"
+        }
+    },
+    {
+        "date": "2024-04-06Z",
+        "image": {
+            "file": "./photos/2024-04-06-spring-in-the-park/spring_in_the_park_01.jpg",
+            "alt": "A cherry blossom tree in full bloom, a cyclist driving beneath it, and a couple on a bench is enjoying the view."
+        },
+        "caption": "Cherry blossoms during springtime.",
+        "link": {
+            "text": "More spring pictures",
+            "url": "/spring-in-the-park/",
+            "icon": "leaf"
+        }
+    },
+    {
         "date": "2024-01-20Z",
         "image": {
             "file": "./photos/2024-01-20-cologne-under-snow/cologne_under_snow_003.jpg",
@@ -24,6 +72,34 @@
             "url": "/new-years-fireworks/",
             "icon": "arrow-right"
         }
+    },
+    {
+        "date": "2023-11-11Z",
+        "image": {
+            "file": "./photos/2023/PXL_20231111_114452091.jpg",
+            "alt": "A small red fungus with white spots nestled amidst leaves and grass."
+        }
+    },
+    {
+        "date": "2023-08-31Z",
+        "image": {
+            "file": "./photos/2023-08-31-zauberwald/zauberwald_06.jpg",
+            "alt": "Tree trunks submerged below turquoise water."
+        },
+        "caption": "The Hintersee in Bavaria, Germany.",
+        "link": {
+            "text": "See more photos of the Zauberwald",
+            "url": "/zauberwald/",
+            "icon": "tree"
+        }
+    },
+    {
+        "date": "2023-06-25Z",
+        "image": {
+            "file": "./photos/2023/sheep_2023_006.jpg",
+            "alt": "A sheep showing a crooked smile to the camera."
+        },
+        "caption": "The sheep are back!"
     },
     {
         "date": "2022-09-24Z",
