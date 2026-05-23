@@ -23,4 +23,4 @@ photos:
   - ../photos/2023-08-31-zauberwald/zauberwald_16.jpg
 ---
 
-Photos from the "Zauberwald" and "Hintersee" near Berchtesgaden in Bavaria, German. All shot on a Fujifilm XT-5 using a Portra 400 film simulation, straight out of the camera without further editing.
+Photos from the _Zauberwald_ and _Hintersee_ near Berchtesgaden in Bavaria, German. All shot on a Fujifilm XT-5 using a Portra 400 film simulation, straight out of the camera without further editing.

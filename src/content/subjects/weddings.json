@@ -6,7 +6,8 @@
     "image": "../photos/2017/li_zi_marco_hochzeit_13.jpg",
     "photos": [
         {
-            "src": "../photos/2017/20170807.jpg"
+            "src": "../photos/2017/20170807.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2017/20170807-3.jpg"
@@ -31,6 +32,7 @@
         },
         {
             "src": "../photos/2017/20170807-12.jpg"
+
         },
         {
             "src": "../photos/2017/20170807-13.jpg"
@@ -96,7 +98,8 @@
             "src": "../photos/2017/20170722-12.jpg"
         },
         {
-            "src": "../photos/2017/20170722-13.jpg"
+            "src": "../photos/2017/20170722-13.jpg",
+            "span": 2
         }
     ]
 }

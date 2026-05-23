@@ -6,7 +6,22 @@
     "image": "../photos/2018-03-31-amsterdam/amsterdam_02.jpg",
     "photos": [
         {
-            "src": "../photos/2019-10-31-paris/paris_2019_11.jpg"
+            "src": "../photos/2024-04-06-spring-in-the-park/spring_in_the_park_01.jpg",
+            "span": 2
+        },
+        {
+            "src": "../photos/2024-08-12-bruges-triennial/bruges_triennial_09.jpg",
+            "span": 2
+        },
+        {
+            "src": "../photos/2024-01-20-cologne-under-snow/cologne_under_snow_003.jpg"
+        },
+        {
+            "src": "../photos/2024-01-20-cologne-under-snow/cologne_under_snow_007.jpg"
+        },
+        {
+            "src": "../photos/2019-10-31-paris/paris_2019_11.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2022/20220614-3.jpg"
@@ -15,10 +30,15 @@
             "src": "../photos/2022/20220614-2.jpg"
         },
         {
-            "src": "../photos/2018-03-31-amsterdam/amsterdam_01.jpg"
+            "src": "../photos/2018-03-31-amsterdam/amsterdam_01.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2018-10-31-edinburgh/edinburgh_08.jpg"
+        },
+        {
+            "src": "../photos/2018-10-31-edinburgh/edinburgh_14.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2018-10-31-edinburgh/edinburgh_03.jpg"
@@ -27,7 +47,8 @@
             "src": "../photos/2018-03-31-amsterdam/amsterdam_02.jpg"
         },
         {
-            "src": "../photos/2018/20180817.jpg"
+            "src": "../photos/2018/20180817.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2019-10-31-paris/paris_2019_03.jpg"
@@ -37,9 +58,6 @@
         },
         {
             "src": "../photos/2018/20181006-2.jpg"
-        },
-        {
-            "src": "../photos/2016/stuff_from_london_01.jpg"
         },
         {
             "src": "../photos/2016/stuff_from_london_07.jpg"
@@ -54,16 +72,8 @@
             "src": "../photos/2018/20181006-3.jpg"
         },
         {
-            "src": "../photos/2016-09-04-rheinkomet/rheinkomet_07.jpg"
-        },
-        {
-            "src": "../photos/2019/20190816.jpg"
-        },
-        {
-            "src": "../photos/2016/impressions_of_basel_04.jpg"
-        },
-        {
-            "src": "../photos/2018-03-31-amsterdam/amsterdam_03.jpg"
+            "src": "../photos/2016-09-04-rheinkomet/rheinkomet_07.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2016/20160529.jpg"

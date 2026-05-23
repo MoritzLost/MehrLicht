@@ -9,7 +9,8 @@
             "src": "../photos/2018-04-26-loxy/loxy_scarf_01.jpg"
         },
         {
-            "src": "../photos/2018-04-26-loxy/loxy_scarf_05.jpg"
+            "src": "../photos/2018-04-26-loxy/loxy_scarf_05.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2018-04-26-loxy/loxy_scarf_03.jpg"
@@ -24,7 +25,8 @@
             "src": "../photos/2018-02-28-christina/christina_deutzer_rheinterrasse_07.jpg"
         },
         {
-            "src": "../photos/2018-04-26-loxy/loxy_scarf_04.jpg"
+            "src": "../photos/2018-04-26-loxy/loxy_scarf_04.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2018-04-26-loxy/loxy_scarf_07.jpg"
@@ -69,7 +71,8 @@
             "src": "../photos/2018-02-18-tim/tim_10.jpg"
         },
         {
-            "src": "../photos/2017/yulia_rheinpark_01.jpg"
+            "src": "../photos/2017/yulia_rheinpark_01.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2018-02-28-christina/christina_deutzer_rheinterrasse_06.jpg"
