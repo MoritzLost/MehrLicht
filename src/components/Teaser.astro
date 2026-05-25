@@ -18,19 +18,21 @@ interface Props {
     pageLayout?: Layout;
     pageWidth?: Width;
     lightbox?: boolean;
+    priority?: boolean;
 }
 
-const { image, alt = '', date, link, pageLayout, pageWidth, lightbox = true } = Astro.props;
+const { image, alt = '', date, link, pageLayout, pageWidth, lightbox = true, priority } = Astro.props;
 const lightboxImage = lightbox ? await getLightboxImage(image) : null;
 ---
 <figure class="teaser">
     {lightbox ? (
-        <a href={lightboxImage!.src} class="lightbox">
+        <a href={lightboxImage!.src} aria-label="View full size" class="lightbox">
             <Picture
                 src={image}
                 alt={alt}
                 pageLayout={pageLayout}
                 pageWidth={pageWidth}
+                priority={priority}
                 class="teaser__image"
             />
         </a>
@@ -40,6 +42,7 @@ const lightboxImage = lightbox ? await getLightboxImage(image) : null;
             alt={alt}
             pageLayout={pageLayout}
             pageWidth={pageWidth}
+            priority={priority}
             class="teaser__image"
         />
     )}

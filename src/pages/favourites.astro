@@ -23,15 +23,16 @@ const width = 'wide';
     <PageHeading heading="My favourite photos" />
 
     <div class="one-column">
-        {favourites.map(async entry => {
+        {favourites.map(async (entry, index) => {
             const lightbox = await getLightboxImage(entry.data.image);
             return <figure class="one-column__figure">
-                <a class="lightbox" href={lightbox.src}>
+                <a class="lightbox" aria-label="View full size" href={lightbox.src}>
                     <Picture
                         src={entry.data.image}
                         alt=""
                         pageLayout="one_column"
                         pageWidth={width}
+                        priority={index === 0}
                         class="blog-entry__image"
                     />
                 </a>

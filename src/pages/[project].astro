@@ -38,15 +38,16 @@ const { Content, remarkPluginFrontmatter } = await render(project);
         'two-columns': project.data.layout === 'two_columns',
         'three-columns': project.data.layout === 'three_columns',
     }]}>
-        {project.data.photos.map (async photo => {
+        {project.data.photos.map (async (photo, index) => {
             const lightbox = await getLightboxImage(photo);
             return <figure>
-                <a class="lightbox" href={lightbox.src}>
+                <a class="lightbox" aria-label="View full size" href={lightbox.src}>
                     <Picture
                         src={photo}
                         alt=""
                         pageLayout={project.data.layout}
                         pageWidth={project.data.width}
+                        priority={index < 3}
                     />
                 </a>
             </figure>

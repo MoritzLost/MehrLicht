@@ -37,17 +37,18 @@ const width = 'full';
         'two-columns': subject.data.layout === 'two_columns',
         'three-columns': subject.data.layout === 'three_columns',
     }]}>
-        {subject.data.photos.map(async photo => {
+        {subject.data.photos.map(async (photo, index) => {
             const lightbox = await getLightboxImage(photo.src);
             return <figure class:list={[
                 { [`span-${photo.span}`]: photo.span || false }
             ]}>
-                <a class="lightbox" href={lightbox.src}>
+                <a class="lightbox" aria-label="View full size" href={lightbox.src}>
                     <Picture
                         src={photo.src}
                         alt=""
                         pageLayout={subject.data.layout}
                         pageWidth={width}
+                        priority={index < 3}
                     />
                 </a>
             </figure>

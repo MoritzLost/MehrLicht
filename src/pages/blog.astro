@@ -26,19 +26,20 @@ const width = 'base';
     </a></p>
 
     <div class="blog">
-        {blog.map(async entry => {
+        {blog.map(async (entry, index) => {
             const lightbox = await getLightboxImage(entry.data.image.file);
 
             return <article class="blog-entry" id={`post-${entry.id}`}>
                 {entry.data.date && <Time date={entry.data.date} class="blog-entry__date" />}
 
                 <figure class="blog-entry__figure">
-                    <a class="lightbox" href={lightbox.src}>
+                    <a class="lightbox" aria-label="View full size" href={lightbox.src}>
                         <Picture
                             src={entry.data.image.file}
                             alt={entry.data.image.alt}
                             pageLayout="one_column"
                             pageWidth={width}
+                            priority={index === 0}
                             class="blog-entry__image"
                         />
                     </a>
