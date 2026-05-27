@@ -1,6 +1,11 @@
 .project-header {
+    margin-bottom: clamp(1.5rem, 3vw, 3rem);
+
     &__time {
         display: block;
+    }
+
+    > * + * {
         margin-top: .5rem;
     }
 }

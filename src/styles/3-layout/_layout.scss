@@ -3,12 +3,15 @@
 .main {
     min-height: 100vh;
 
+    --article-padding-inline: 1rem;
+    --article-padding-block: 1rem;
+
     &__article {
         background: white;
         color: inherit;
         font-size: var(--font-size-1);
         margin: 0 auto;
-        padding: 1rem;
+        padding: var(--article-padding-block) var(--article-padding-inline);
         width: 100%;
         max-width: 40rem;
         min-width: 0;
@@ -31,9 +34,11 @@
 
     @include breakpoints.breakpoint-up(sm) {
         &__article {
+            --article-padding-inline: 2rem;
+            --article-padding-block: 2rem;
+
             margin-top: 3rem;
             margin-bottom: 3rem;
-            padding: 2rem;
 
             .main--full & {
                 max-width: 96vw;
@@ -89,9 +94,11 @@
         }
 
         &__article {
+            --article-padding-inline: 3rem;
+            --article-padding-block: 4rem;
+
             margin-top: 5rem;
             margin-bottom: 5rem;
-            padding: 4rem 3rem;
         }
     }
 }

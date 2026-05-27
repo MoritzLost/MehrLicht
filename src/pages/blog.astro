@@ -19,41 +19,47 @@ const width = 'base';
     description="Photo blog by Moritz L’Hoest"
     width={width}
 >
-    <PageHeading heading="Photo blog" />
+    <PageHeading heading="Photo blog">
+        <p><a href="/rss.xml" class="icon-link">
+            <Icon icon="rss" style="solid" class="icon-link__icon" />RSS Feed – Subscribe to new photos
+        </a></p>
+    </PageHeading>
 
-    <p><a href="/rss.xml" class="icon-link">
-        <Icon icon="rss" style="solid" class="icon-link__icon" />RSS Feed – Subscribe to new photos
-    </a></p>
+    <hr aria-hidden="true" class="breakout-divider" />
 
     <div class="blog">
         {blog.map(async (entry, index) => {
             const lightbox = await getLightboxImage(entry.data.image.file);
 
-            return <article class="blog-entry" id={`post-${entry.id}`}>
-                {entry.data.date && <Time date={entry.data.date} class="blog-entry__date" />}
+            return <>
+                <article class="blog-entry" id={`post-${entry.id}`}>
+                    {entry.data.date && <Time date={entry.data.date} class="blog-entry__date" />}
 
-                <figure class="blog-entry__figure">
-                    <a class="lightbox" aria-label="View full size" href={lightbox.src}>
-                        <Picture
-                            src={entry.data.image.file}
-                            alt={entry.data.image.alt}
-                            pageLayout="one_column"
-                            pageWidth={width}
-                            priority={index === 0}
-                            class="blog-entry__image"
-                        />
-                    </a>
+                    <figure class="blog-entry__figure">
+                        <a class="lightbox" aria-label="View full size" href={lightbox.src}>
+                            <Picture
+                                src={entry.data.image.file}
+                                alt={entry.data.image.alt}
+                                pageLayout="one_column"
+                                pageWidth={width}
+                                priority={index === 0}
+                                class="blog-entry__image"
+                            />
+                        </a>
 
-                    {entry.data.caption && <figcaption class="blog-entry__caption">
-                        {entry.data.caption}
-                    </figcaption>}
+                        {entry.data.caption && <figcaption class="blog-entry__caption">
+                            {entry.data.caption}
+                        </figcaption>}
 
-                    {entry.data.link && <a class="blog-entry__link" href={entry.data.link.url}>
-                        <Icon icon={entry.data.link.icon || 'arrow-right'} style={entry.data.link.iconStyle || 'solid'} class="blog-entry__link-icon" />
-                        {entry.data.link.text}
-                    </a>}
-                </figure>
-            </article>
+                        {entry.data.link && <a class="blog-entry__link" href={entry.data.link.url}>
+                            <Icon icon={entry.data.link.icon || 'arrow-right'} style={entry.data.link.iconStyle || 'solid'} class="blog-entry__link-icon" />
+                            {entry.data.link.text}
+                        </a>}
+                    </figure>
+                </article>
+
+                {index < blog.length - 1 && <hr aria-hidden="true" class="breakout-divider" />}
+            </>
         })}
     </div>
 

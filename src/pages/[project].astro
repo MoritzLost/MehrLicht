@@ -31,6 +31,8 @@ const { Content, remarkPluginFrontmatter } = await render(project);
 >
     <PageHeading heading={project.data.title} date={remarkPluginFrontmatter.date} />
 
+    <hr aria-hidden="true" class="breakout-divider"  style={{ 'margin-bottom': 'var(--article-padding-block)' }} />
+
     <Content />
 
     <div class:list={[{

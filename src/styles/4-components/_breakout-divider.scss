@@ -1,0 +1,13 @@
+@use "../2-mixins/breakpoints";
+
+.breakout-divider {
+    width: calc(100% + 2 * var(--article-padding-inline));
+    margin-left: calc(-1 * var(--article-padding-inline));
+    border-top: 32px solid var(--theme-color, var(--primary));
+    opacity: 1;
+    display: none;
+
+    @include breakpoints.breakpoint-up(sm) {
+        display: block;
+    }
+}

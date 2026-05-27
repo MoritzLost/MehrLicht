@@ -34,6 +34,8 @@ const projects = await getProjectsCollectionInOrder();
             </nav>
         </div>
 
+        <hr aria-hidden="true" class="breakout-divider" />
+
         <section class="homepage-content__section" aria-labelledby="latest-photos">
             <h2 id="latest-photos">Latest photos</h2>
             <div class="three-columns">
@@ -48,6 +50,8 @@ const projects = await getProjectsCollectionInOrder();
                 </a>
             </p>
         </section>
+
+        <hr aria-hidden="true" class="breakout-divider" />
 
         <section class="homepage-content__section" aria-labelledby="about-me">
             <h2 id="about-me">About me</h2>
@@ -83,6 +87,8 @@ const projects = await getProjectsCollectionInOrder();
             </div>
         </section>
 
+        <hr aria-hidden="true" class="breakout-divider" />
+
         <section class="homepage-content__section" aria-labelledby="photos-by-subject">
             <h2 id="photos-by-subject">Photos by subject</h2>
             <div class="teaser-grid">
@@ -90,6 +96,8 @@ const projects = await getProjectsCollectionInOrder();
                 {subjects.map(subject => <Teaser image={subject.data.image} link={{ url: `/${subject.id}/`, text: subject.data.title, icon: 'arrow-right' }} pageLayout="three_columns" pageWidth="full" />)}
             </div>
         </section>
+
+        <hr aria-hidden="true" class="breakout-divider" />
 
         <section class="homepage-content__section" aria-labelledby="photos-by-project">
             <h2 id="photos-by-project">Photos by project</h2>
