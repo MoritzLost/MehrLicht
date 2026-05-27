@@ -31,6 +31,7 @@ export const GET: APIRoute = async context => {
         description: 'Photo blog by Moritz L’Hoest',
         site: context.site!,
         items,
-        customData: '<language>en</language>',
+        xmlns: { atom: 'http://www.w3.org/2005/Atom' },
+        customData: `<language>en</language><atom:link href="${new URL('rss.xml', context.site)}" rel="self" type="application/rss+xml"/>`,
     });
 };
