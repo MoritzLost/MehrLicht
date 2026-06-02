@@ -28,7 +28,7 @@ jobs:
         uses: actions/cache/restore@v5
         with:
           path: .astro/
-          key: astro-${{ hashFiles('src/content/**/*.{jpg,jpeg,png,webp,avif,gif,tiff}', 'src/utils/responsive-images.ts') }}
+          key: astro-${{ hashFiles('src/content/photos/**', 'src/utils/responsive-images.ts') }}
           restore-keys: astro-
 
       - name: Build
@@ -38,7 +38,7 @@ jobs:
         uses: actions/cache/save@v5
         with:
           path: .astro/
-          key: astro-${{ hashFiles('src/content/**/*.{jpg,jpeg,png,webp,avif,gif,tiff}', 'src/utils/responsive-images.ts') }}
+          key: astro-${{ hashFiles('src/content/photos/**', 'src/utils/responsive-images.ts') }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy dist/ --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT }}
