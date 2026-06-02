@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Restore Astro image cache
+      - name: Restore Astro cache
         uses: actions/cache/restore@v5
         with:
           path: .astro/
@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Save Astro image cache
+      - name: Save Astro cache
         uses: actions/cache/save@v5
         with:
           path: .astro/
