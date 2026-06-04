@@ -12,6 +12,7 @@ type Props = Omit<ComponentProps<typeof AstroPicture>, 'formats' | 'quality'> & 
     span?: 1 | 2 | 3;
     formats?: ComponentProps<typeof AstroPicture>['formats'];
     quality?: ComponentProps<typeof AstroPicture>['quality'];
+    priority?: ComponentProps<typeof AstroPicture>['priority'];
 };
 
 const {
@@ -20,6 +21,7 @@ const {
     span = 1,
     formats = ['avif', 'webp'],
     quality = 'high',
+    priority,
     widths,
     sizes,
     ...rest
@@ -31,7 +33,8 @@ const responsiveConfig = buildImageConfig(pageLayout, pageWidth, span);
 <AstroPicture
     formats={formats}
     quality={quality}
+    priority={priority}
     widths={widths ?? responsiveConfig.srcset}
-    sizes={sizes ?? `auto, ${responsiveConfig.sizes}`}
+    sizes={sizes ?? `${!priority ? 'auto, ' : ''}${responsiveConfig.sizes}`}
     {...rest as any}
 />
