@@ -2,6 +2,12 @@
 import { getProjectsCollectionInOrder, getSubjectsCollectionInOrder } from "@utils/collections"
 import { slug } from 'github-slugger';
 
+interface Props {
+    layout: 'desktop' | 'mobile';
+}
+
+const { layout } = Astro.props;
+
 const navSections = [
     {
         heading: 'General',
@@ -26,8 +32,8 @@ const navSections = [
 
 <h2 class="visually-hidden">Site menu</h2>
 
-{navSections.map(section => <section class="navigation__section" aria-labelledby={slug(section.heading)}>
-    <h3 class="navigation__headline" id={slug(section.heading)}>
+{navSections.map(section => <section class="navigation__section" aria-labelledby={`${layout}-${slug(section.heading)}`}>
+    <h3 class="navigation__headline" id={`${layout}-${slug(section.heading)}`}>
         {section.heading}
     </h3>
 
