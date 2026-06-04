@@ -2,7 +2,6 @@
     "name": "Mehr Licht",
     "short_name": "MehrLicht",
     "description": "Personal photography website of Moritz L’Hoest. Inculding people, wildlife and travel photography.",
-    "lang": "en-GB",
     "start_url": "/",
     "id": "/?utm_source=pwa",
     "display": "standalone",
