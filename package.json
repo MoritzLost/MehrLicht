@@ -22,7 +22,7 @@
         "@astrojs/sitemap": "^3.7.2",
         "@fortawesome/fontawesome-free": "^7.2.0",
         "@midzer/tobii": "^3.2.0",
-        "astro": "^6.3.3",
+        "astro": "^6.4.6",
         "sass": "^1.99.0"
     },
     "engines": {
