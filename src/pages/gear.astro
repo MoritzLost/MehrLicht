@@ -1,0 +1,46 @@
+---
+import Html from '@layouts/Html.astro';
+import PageHeading from '@components/PageHeading.astro';
+import BackToTop from '@components/BackToTop.astro';
+
+const width = 'base';
+---
+
+<Html
+    title="My photo gear"
+    description="An overview of my current and previous photo gear. I currently use the Fujifilm system."
+    width={width}
+    >
+    <PageHeading heading="My photo gear">
+        <p>All the camera equipment I currently use and have used in the past.</p>
+    </PageHeading>
+
+    <h2>Current gear</h2>
+
+    <ul>
+        <li><strong>Fujifilm X-T5</strong></li>
+        <li>Fujifilm XF 27mm F2.8 R WR</li>
+        <li>Fujifilm XF 50mm F2 WR</li>
+    </ul>
+
+    <h2>Previous gear (until June 2023)</h2>
+
+    <ul>
+        <li><strong>Canon EOS 80D</strong></li>
+        <li>Sigma Art 30mm f/1.4 EX DC HSM</li>
+        <li>Sigma Art 85mm f/1.4 DG HSM</li>
+        <li>Tamron SP AF 17–50mm f/2.8 XR Di II LD Aspherical (IF)</li>
+        <li>Canon EF 38–80mm f/4–5.6 III</li>
+    </ul>
+
+    <h2>Smartphone photos</h2>
+
+    <ul>
+        <li><strong>Google Pixel 10a</strong> (current)</li>
+        <li>Google Pixel 7</li>
+        <li>Google Pixel 5</li>
+    </ul>
+
+    <BackToTop />
+</Html>
+

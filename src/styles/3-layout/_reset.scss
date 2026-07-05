@@ -89,6 +89,11 @@ video {
     vertical-align: baseline;
 }
 
+ol:not([class]),
+ul:not([class]) {
+    margin-left: 1.25rem;
+}
+
 button,
 input,
 optgroup,
