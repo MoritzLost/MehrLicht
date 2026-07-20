@@ -59,6 +59,7 @@ export const collections = {
             generateId: ({ entry }) => entry.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, ''),
         }),
         schema: ({ image }) => z.object({
+            date: z.date().optional(),
             title: z.string(),
             headline: z.string().optional(),
             layout: z.enum(LAYOUTS),

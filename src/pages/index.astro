@@ -102,7 +102,7 @@ const projects = await getProjectsCollectionInOrder();
         <section class="homepage-content__section" aria-labelledby="photos-by-project">
             <h2 id="photos-by-project">Photos by project</h2>
             <div class="teaser-grid">
-                {projects.map(project => <Teaser image={project.data.image} link={{ url: `/${project.id}/`, text: project.data.title, icon: 'arrow-right' }} date={(project.rendered?.metadata?.frontmatter as { date?: Date })?.date} pageLayout="three_columns" pageWidth="full" />)}
+                {projects.map(project => <Teaser image={project.data.image} link={{ url: `/${project.id}/`, text: project.data.title, icon: 'arrow-right' }} date={project.data.date!} pageLayout="three_columns" pageWidth="full" />)}
             </div>
         </section>
 

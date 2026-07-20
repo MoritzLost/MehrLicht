@@ -1,18 +1,19 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import Html from '@layouts/Html.astro';
 import PageHeading from '@components/PageHeading.astro';
 import BackToTop from '@components/BackToTop.astro';
 import { getLightboxImage } from '@utils/lightbox';
 import Picture from '@components/Picture.astro';
+import { getProjectsCollectionInOrder } from '@utils/collections';
 
 interface Props {
     project: CollectionEntry<'projects'>;
 }
 
 export async function getStaticPaths() {
-    const projects = await getCollection('projects');
+    const projects = await getProjectsCollectionInOrder();
     return projects.map(project => ({
         params: { project: project.id },
         props: { project },
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await render(project);
+const { Content } = await render(project);
 ---
 
 <Html
@@ -29,7 +30,7 @@ const { Content, remarkPluginFrontmatter } = await render(project);
     width={project.data.width ?? 'base'}
     themeColor={project.data.themeColor}
 >
-    <PageHeading heading={project.data.title} date={remarkPluginFrontmatter.date} />
+    <PageHeading heading={project.data.title} date={project.data.date} />
 
     <hr aria-hidden="true" class="breakout-divider"  style={{ 'margin-bottom': 'var(--article-padding-block)' }} />
 

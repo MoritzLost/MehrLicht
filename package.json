@@ -18,11 +18,11 @@
     },
     "dependencies": {
         "@astrojs/check": "^0.9.9",
-        "@astrojs/rss": "^4.0.18",
-        "@astrojs/sitemap": "^3.7.2",
+        "@astrojs/rss": "^4.0.19",
+        "@astrojs/sitemap": "^3.7.3",
         "@fortawesome/fontawesome-free": "^7.2.0",
         "@midzer/tobii": "^3.2.0",
-        "astro": "^6.3.3",
+        "astro": "^7.1.3",
         "sass": "^1.99.0"
     },
     "engines": {

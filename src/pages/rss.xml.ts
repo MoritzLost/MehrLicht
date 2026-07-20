@@ -5,10 +5,8 @@ import { getBlogCollectionInOrder } from '@utils/collections';
 
 export const GET: APIRoute = async context => {
     const blog = await getBlogCollectionInOrder();
-    const blogReversed = [...blog].reverse();
-
     const items = await Promise.all(
-        blogReversed.map(async entry => {
+        blog.map(async entry => {
             const image = await getImage({ src: entry.data.image.file, width: 1600, quality: 'high' });
             const format = entry.data.image.file.format === 'jpg' ? 'jpeg' : entry.data.image.file.format;
 

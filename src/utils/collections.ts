@@ -18,9 +18,10 @@ export const getSubjectsCollectionInOrder = async (): Promise<CollectionEntry<'s
 export const getProjectsCollectionInOrder = async (): Promise<CollectionEntry<'projects'>[]> => {
     const projects = await getCollection('projects');
     return projects
-        .sort((a, b) => {
-            const dateA = a.filePath!.split('/').pop()!.slice(0, 10);
-            const dateB = b.filePath!.split('/').pop()!.slice(0, 10);
-            return new Date(dateB).valueOf() - new Date(dateA).valueOf();
-        });
-}
+        .map(entry => {
+            const date = entry.filePath!.split('/').pop()!.slice(0, 10);
+            entry.data.date = new Date(date);
+            return entry;
+        })
+        .sort((a, b) => b.data.date!.valueOf() - a.data.date!.valueOf());
+};
