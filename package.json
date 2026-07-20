@@ -20,16 +20,16 @@
         "@astrojs/check": "^0.9.9",
         "@astrojs/rss": "^4.0.19",
         "@astrojs/sitemap": "^3.7.3",
-        "@fortawesome/fontawesome-free": "^7.2.0",
+        "@fortawesome/fontawesome-free": "^7.3.1",
         "@midzer/tobii": "^3.2.0",
         "astro": "^7.1.3",
-        "sass": "^1.99.0"
+        "sass": "^1.101.0"
     },
     "engines": {
         "node": "^24.7.0",
         "npm": "^11.0.0"
     },
     "devDependencies": {
-        "wrangler": "^4.92.0"
+        "wrangler": "^4.112.0"
     }
 }
