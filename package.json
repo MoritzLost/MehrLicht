@@ -30,6 +30,6 @@
         "npm": "^11.0.0"
     },
     "devDependencies": {
-        "wrangler": "^4.131.2"
+        "wrangler": "^4.146.0"
     }
 }
