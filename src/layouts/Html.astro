@@ -29,6 +29,7 @@ if (image) {
         imageWidth = optimizedImage.attributes.width;
         imageHeight = optimizedImage.attributes.height;
     }
+    seoImage = new URL(seoImage, import.meta.env.DEV ? Astro.url : Astro.site).href;
 } else {
     seoImage = null;
 }
