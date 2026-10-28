@@ -1,5 +1,13 @@
 [
     {
+        "date": "2026-10-28Z",
+        "image": {
+            "file": "./photos/2026/DSCF8859.JPG",
+            "alt": "Some charred logs coated in patches of ash in a firepit, illuminated by smoldering embers."
+        },
+        "caption": "Glowing embers in a firepit."
+    },
+    {
         "date": "2026-07-04Z",
         "image": {
             "file": "./photos/2026/DSCF6802.JPG",
