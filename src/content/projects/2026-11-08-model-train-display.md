@@ -1,6 +1,6 @@
 ---
 title: Model Train Display
-layout: three_columns
+layout: two_columns
 width: full
 image: ../photos/2026-11-08-model-train-display/model_train_display_01.jpg
 themeColor: "#646f3f"
