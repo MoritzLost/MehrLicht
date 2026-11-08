@@ -2,8 +2,21 @@
     {
         "date": "2026-11-08Z",
         "image": {
+            "file": "./photos/2026-11-08-model-train-display/model_train_display_01.jpg",
+            "alt": "A miniature Deutsche Bahn train at a model train station."
+        },
+        "caption": "Model Train Display.",
+        "link": {
+            "text": "More tiny trains",
+            "url": "/model-train-display/",
+            "icon": "train"
+        }
+    },
+    {
+        "date": "2026-11-05Z",
+        "image": {
             "file": "./photos/2026/DSCF9273.JPG",
-            "alt": "The Mülheim Bridge in Cologne at dusk, with an orange glow on the horizon, and a slightly lit tree in front."
+            "alt": "The Mülheim Bridge in Cologne at dusk, with an orange glow on the horizon and a dimly lit tree in front."
         },
         "caption": "The Mülheim Bridge at dusk."
     },
