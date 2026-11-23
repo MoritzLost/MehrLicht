@@ -13,7 +13,14 @@
             "src": "../photos/2022-09-24-isle-of-arran/isle_of_arran_14.jpg"
         },
         {
+            "src": "../photos/2026-11-22-autumn-colors/autumn_colors_01.jpg"
+        },
+        {
             "src": "../photos/2023-08-31-zauberwald/zauberwald_01.jpg"
+        },
+        {
+            "src": "../photos/2026-11-22-autumn-colors/autumn_colors_03.jpg",
+            "span": 2
         },
         {
             "src": "../photos/2023-08-31-zauberwald/zauberwald_05.jpg"
@@ -22,8 +29,7 @@
             "src": "../photos/2023-08-31-zauberwald/zauberwald_07.jpg"
         },
         {
-            "src": "../photos/2023/sheep_2023_006.jpg",
-            "span": 2
+            "src": "../photos/2023/sheep_2023_006.jpg"
         },
         {
             "src": "../photos/2023/PXL_20231111_114452091.jpg"
@@ -40,9 +46,6 @@
         },
         {
             "src": "../photos/2022-09-21-squirrels-of-glasgow/squirrels_glasgow_07.jpg"
-        },
-        {
-            "src": "../photos/2022/20220614.jpg"
         },
         {
             "src": "../photos/2020/20200918.jpg"
@@ -80,12 +83,6 @@
         },
         {
             "src": "../photos/2020-05-20-sheep-2020/sheep_rhine_05.jpg"
-        },
-        {
-            "src": "../photos/2020-05-20-sheep-2020/sheep_rhine_12.jpg"
-        },
-        {
-            "src": "../photos/2020/20200822.jpg"
         },
         {
             "src": "../photos/2020-03-23-ducks-park/ducks_park_05.jpg"
