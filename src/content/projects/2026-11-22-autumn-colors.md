@@ -3,7 +3,7 @@ title: Autumn Colors
 layout: two_columns
 width: full
 image: ../photos/2026-11-22-autumn-colors/autumn_colors_03.jpg
-themeColor: "#f0a02f"
+themeColor: "#ef9d2d"
 photos:
   - ../photos/2026-11-22-autumn-colors/autumn_colors_01.jpg
   - ../photos/2026-11-22-autumn-colors/autumn_colors_02.jpg
