@@ -1,5 +1,17 @@
 [
     {
+        "date": "2026-11-22Z",
+        "image": {
+            "file": "./photos/2026-11-22-autumn-colors/autumn_colors_07.jpg",
+            "alt": "Afternoon light shining through yellowing leaves overhanging a park, with leaves scattered on the ground."
+        },
+        "link": {
+            "text": "More autumn colors",
+            "url": "/autumn-colors/",
+            "icon": "leaf"
+        }
+    },
+    {
         "date": "2026-11-08Z",
         "image": {
             "file": "./photos/2026-11-08-model-train-display/model_train_display_01.jpg",
