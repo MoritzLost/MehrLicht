@@ -8,6 +8,8 @@ import Teaser from '@components/Teaser.astro';
 import { getBlogCollectionInOrder, getSubjectsCollectionInOrder, getProjectsCollectionInOrder } from '@utils/collections';
 import { preview as favouritesPreview } from './favourites.astro';
 
+const BLOG_LIMIT = 9;
+
 const blog = await getBlogCollectionInOrder();
 const subjects = await getSubjectsCollectionInOrder();
 const projects = await getProjectsCollectionInOrder();
@@ -39,7 +41,7 @@ const projects = await getProjectsCollectionInOrder();
         <section class="homepage-content__section" aria-labelledby="latest-photos">
             <h2 id="latest-photos">Latest photos</h2>
             <div class="three-columns">
-                {blog.slice(0, 8).map(async entry => <Teaser priority image={entry.data.image.file} alt={entry.data.image.alt} date={entry.data.date} link={entry.data.link} pageLayout="three_columns" pageWidth="full" />)}
+                {blog.slice(0, BLOG_LIMIT).map(async entry => <Teaser priority image={entry.data.image.file} alt={entry.data.image.alt} date={entry.data.date} link={entry.data.link} pageLayout="three_columns" pageWidth="full" />)}
             </div>
             <p class="stack" style="--stack-gap: 1rem;">
                 <a href="/blog/" class="icon-link">
